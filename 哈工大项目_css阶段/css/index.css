@@ -1,0 +1,502 @@
+@charset "UTF-8";
+
+/*网页导航部分*/
+
+.nav_content {
+    height: 56px;
+    width: 1184px;
+    margin: 26px auto 18px;
+}
+
+
+/*s logo*/
+
+.nav_content .logo {
+    float: left;
+}
+
+.nav_content .logo h1 {
+    position: absolute;
+    text-indent: -9999em;
+}
+
+.nav_content .logo img {
+    width: 308px;
+    height: 56px;
+}
+
+
+/*E logo*/
+
+.nav_content .user_content {
+    float: right;
+}
+
+
+/* S 搜索 */
+
+.nav_content .search {
+    margin: 0 359px 0 359px;
+}
+
+.search .search_content {
+    height: 34px;
+    padding: 10px 0 13px;
+    position: relative;
+}
+
+.search .course,
+.search input {
+    font-size: 14px;
+    line-height: 30px;
+    height: 30px;
+    float: left;
+    border: 2px solid #e6e6e6;
+    box-sizing: content-box;
+}
+
+
+/* 布局时遇到的问题：input标签和div标签统一设置高度时，再设置边框，盒子模型中content为什么不一样 */
+
+.search .course {
+    text-align: center;
+    width: 66px;
+    height: 30px;
+    position: relative;
+}
+
+.search .course_content {
+    font-size: 12px;
+    color: black;
+    display: inline-block;
+}
+
+
+/* 布局时将input的高度注释高度就一致了，有疑惑 */
+
+.search input {
+    width: 378px;
+    padding-left: 1em;
+    position: absolute;
+    left: 68px;
+}
+
+.search .icon_search {
+    position: absolute;
+    background: url(../img/首页_12.png) no-repeat;
+    height: 24px;
+    width: 24px;
+    right: 7px;
+    top: 15px;
+}
+
+.course .triangle_P {
+    position: absolute;
+    right: 5px;
+    top: 13px;
+}
+
+.course_menu {
+    width: 70px;
+    height: 64px;
+    background: #ffffff;
+    /* border: 2px solid #c6c6c6; */
+    position: absolute;
+    left: -2px;
+    display: none;
+    z-index: 2;
+}
+
+
+/* hover伪元素的使用必须弹出的层和触发的类为父子关系 */
+
+.search .course:hover .course_menu {
+    display: block;
+}
+
+.course_menu li {
+    width: 66px;
+    height: 30px;
+    border: 2px solid #e6e6e6;
+}
+
+.course_menu .course-item {
+    position: absolute;
+    top: 32px;
+}
+
+.course_menu li:hover {
+    background: #e6e6e6;
+}
+
+
+/* E 搜索 */
+
+
+/*S 用户导航*/
+
+.user_content {
+    padding: 7px 0 10px;
+    width: 260px;
+}
+
+.user_menu {
+    line-height: 44px;
+}
+
+.user_content .user_menu li {
+    float: left;
+}
+
+.user_menu .user_msg {
+    background: url(../img/消息精灵图.png) no-repeat 0 6px;
+    width: 28px;
+    height: 37px;
+    position: relative;
+    margin-right: 42px;
+}
+
+.user_menu .user_msg .user_msg_bg {
+    background: url(../img/消息精灵图.png) no-repeat 0 -35px;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: -10px;
+    top: -3px;
+    font-size: 12px;
+    color: #f7d1cf;
+    text-align: center;
+    line-height: 24px;
+    font-weight: bold;
+}
+
+.user_msg_name {
+    width: 120px;
+    position: relative;
+}
+
+.user_img_hr,
+.user_name {
+    float: left;
+}
+
+.user_menu .user_img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+.user_menu .user_name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 10px 0 10px;
+    width: 56px;
+}
+
+.user_menu .user_name,
+.user_type .user_type_name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #7b7b7b;
+}
+
+.triangle_style_red {
+    border: 5px solid #ed8178;
+    border-color: #e7594d transparent transparent transparent;
+    border-style: solid dashed dashed;
+    width: 0;
+    height: 0;
+}
+
+.triangle_position_user {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+}
+
+.user_menu .user_type {
+    width: 70px;
+    position: relative;
+}
+
+.triangle_position_type {
+    position: absolute;
+    right: 0px;
+    top: 20px;
+}
+
+.user_msg_name {
+    position: relative;
+}
+
+.user_name_menu,
+.teacher_name {
+    /* width: 128px; */
+    height: 168px;
+    /* border: 2px solid #ececec; */
+    position: absolute;
+    top: 48px;
+    right: -4px;
+    display: none;
+    z-index: 3;
+}
+
+.user_msg_name:hover .user_name_menu {
+    display: block;
+}
+
+.user_name_list li {
+    border: 1px solid #ececec;
+    width: 124px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    background: #ffff;
+}
+
+.user_name_list li>a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #959595;
+}
+
+
+/* .user_name_list li:hover {
+    background: rgb(228, 228, 228);
+} */
+
+.user_type:hover .teacher_name {
+    display: block;
+}
+
+
+/* E 用户导航 */
+
+
+/* S header导航 */
+
+header {
+    height: 60px;
+    background: #3598db;
+    position: relative;
+}
+
+.header_container {
+    width: 1184px;
+    margin: 0 auto;
+    height: 60px;
+    line-height: 60px;
+}
+
+.header_main {
+    float: left;
+}
+
+.header_main_menu {
+    height: 60px;
+}
+
+.header_aside {
+    float: right;
+    z-index: 7;
+}
+
+.header_aside_menu {
+    height: 60px;
+}
+
+.header_main .header_main_menu li,
+.header_aside .header_aside_menu li {
+    float: left;
+}
+
+.header_main_menu li>a {
+    padding: 8px 20px;
+    margin-left: 8px;
+}
+
+.header_main_menu li>a,
+.header_aside_menu li>a {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.header_aside_menu li>a {
+    padding-left: 20px;
+}
+
+.header_aside {
+    height: 60px;
+    margin-left: 20px;
+    background: #e7594d;
+}
+
+.header_main_menu li>a.on {
+    background: #2db0f9;
+    border-radius: 6px;
+}
+
+.header_main_menu li>a:hover {
+    background: #2db0f9;
+    border-radius: 6px;
+}
+
+
+/* 父元素高度为0子元素进行绝对定位，会造成高度塌陷来达到效果 */
+
+.header_red_container {
+    margin-left: 1184px;
+    position: relative;
+}
+
+.header_red {
+    width: 50%;
+    background: #e7594d;
+    height: 60px;
+    position: absolute;
+    right: 0;
+    top: -60px;
+}
+
+
+/* E header导航 */
+
+
+/* S banner图 */
+
+.banner {
+    height: 406px;
+    background: #61caff;
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+}
+
+
+/* s banner图底部圆点   */
+
+.point_picture {
+    width: 84px;
+    height: 22px;
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    margin-left: -11px;
+    /* background: #000; */
+}
+
+.point_picture .point-item {
+    float: left;
+}
+
+.point-item a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(../img/首页_15.png) no-repeat -146px 0;
+    padding: 0 2px;
+}
+
+.point-item a.point_on {
+    background: url(../img/首页_15.png) no-repeat -28px 0;
+}
+
+
+/* E banner图底部圆点 */
+
+
+/* E banner图 */
+
+
+/* S 网页主内容区域 */
+
+.main {
+    width: 1184px;
+    margin: 0 auto;
+}
+
+.main_nav {
+    height: 22px;
+    padding: 42px 0 30px;
+}
+
+.main_nav_title {
+    float: left;
+}
+
+.main_nav_icon,
+.main_nav_title h3 {
+    float: left;
+}
+
+.main_nav_icon {
+    width: 10px;
+    height: 22px;
+    display: inline-block;
+    background: #45b9f9;
+    margin-right: 14px;
+}
+
+.main_nav_title h3,
+.main_nav_more {
+    font-size: 22px;
+    line-height: 22px;
+}
+
+.main_nav_title h3 {
+    color: #4d4d4d;
+    ;
+}
+
+.main_nav_more {
+    float: right;
+    color: #2db0f9;
+}
+
+.main_content {
+    height: 526px;
+}
+
+.main_content .main_content_item {
+    width: 211px;
+    height: 262px;
+    float: left;
+    padding: 0 10px 20px 10px;
+}
+
+.main_content_item .mcontent_img {
+    width: 209px;
+    height: 180px;
+    border: 1px solid #959595;
+}
+
+.mcontent_title {
+    width: 209px;
+    height: 30px;
+    line-height: 30px;
+}
+
+
+/* E 网页主内容区域 */
+
+
+/* S 网页底部区域 */
+
+.footer {
+    margin-top: 76px;
+    height: 140px;
+    line-height: 140px;
+    background: #373a43;
+}
+
+.footer_txt {
+    width: 470px;
+    height: 26px;
+    margin: 0 auto;
+    color: #ebebec;
+}
+
+
+/* E 网页底部区域 */

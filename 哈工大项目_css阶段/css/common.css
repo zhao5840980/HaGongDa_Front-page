@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+/* 倒三角 */
+
+.triangle_down {
+    border: 5px solid #7b7b7b;
+    border-style: solid dashed dashed;
+    border-color: #7b7b7b transparent transparent transparent;
+    width: 0px;
+    height: 0px;
+}
+
+
+/* 线框三角 */
+
+.triangle_line {
+    position: relative;
+}
+
+.triangle_line::before,
+.triangle_line::after {
+    content: "";
+    border: 6px solid #ededed85;
+    border-style: dashed dashed solid;
+    border-color: transparent transparent #ededed85 transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: 50%;
+    top: -12px;
+}
+
+.triangle_line::after {
+    border-color: transparent transparent #ffffff transparent;
+    top: -8px;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
